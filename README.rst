@@ -11,7 +11,9 @@
     :target: https://github.com/HeloiseS/hoki/actions/workflows/ci_release.yml)
     
 .. image:: https://img.shields.io/pypi/dm/hoki
-    
+
+**Note**: If you raise an issue and I ignore you please **email: hfstevance@gmail.com** (I probably just missed GitHub's email). 
+
 Bridging the Gap Between Observation and Theory
 =================================================
 
