@@ -1,0 +1,30 @@
+This directory contains the output files assosciated with BPASS v2.3 (Broc)
+
+The only distinction between the model inputs in v2.2.1 and v2.3 is the inclusion of new Main Sequence and Giant star spectra with variable composition. These spectra come from the the C3K spectral library, courtesy of C. Conroy and B. Johnson. The stellar spectra in the C3K library use the Asplund et al. (2009) composition as the elemental abundance mixture. At each of the stellar metallicities used by the BPASS stellar evolution models, spectra have been calculated to match the overall metallicity mass fraction (Z), regardless of composition. Consequently, spectra which have an increased alpha/Fe (alpha-enhanced) will be iron-poor to maintain the same total Z. 
+
+The temperature and surface gravity coverage of these C3K spectral grids is illustrated in Figure 2 of Byrne et al (2022). Hot, low-gravity spectra from the CKC14 spectral libraries are included to improve the coverage of parameter space. These supplementary models maintain a Solar-scaled mixture for their composition. All other spectral libraries (white dwarfs, Wolf-Rayet stars, etc.) also remain unchanged.
+
+Five separate tar files are included, one for each alpha/Fe option. The strings a-02, a+00, a+02, a+04 and a+06 are used in the output filenames and the tar filenames to identify models which have [alpha/Fe] = -0.2, +0.0, +0.2, +0.4 and +0.6 respectively.
+
+Each tar file contains 5 output files for each of the 13 BPASS metallicities, for both single star and binary star populations, giving 130 files in each, and a total of 650 files for the complete data release.
+
+All filenames have the format: datatype-<opt>-<imf>.<alp>.<z>.dat
+
+Included in this limited spectral release are:
+
+datatype: colours, ionizing, lick, spectra, uvindex
+<opt>: sin, bin
+<imf>: imf135_300
+<alp>: a-02, a+00, a+02, a+04, a+06
+<z>: zem5, zem4, z001, z002, z003, z004, z006, z008, z010, z020, z030, z040
+
+The colours files contains information on photometric colours. 
+The ionizing data files contains information on the production of ionizing radiation. 
+The lick output files contain measurements of standard Lick indices
+The spectra contain the spectral energy distribution from 1 to 100000 Angstrom
+The uvindex files contain measurements of a number of ultraviolet spectral indices. An additional file, UV_indexes.dat is provided which contains the wavelength ranges of the continuum windows and the index region, along with the additional broadening added to both sides of the red and blue continuum ranges (B, in Angstrom) and the smoothing (smt, in Angstrom) of the spectrum used to calculate each of these indices from the spectral energy distribution.
+
+For detailed information on the contents of each of the output data types, refer to the BPASS manual which accompanies this data release.
+
+Users of this spectral library should reference Byrne et al (2022) and the Stanway & Eldridge (2018) paper which describes the underlying physics.
+

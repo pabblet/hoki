@@ -572,7 +572,7 @@ def spectra_all_z(data_path, imf, binary=True):
          raise HokiTypeError("The folder location is expected to be a string.")
 
     # check if compiled file exists
-    _spec_path = os.path.join(data_path, f"all_spectra-{star}-{imf}.npy")
+    _spec_path = os.path.join(data_path, f"spectra-{star}-{imf}.dat")
     if os.path.isfile(_spec_path):
         print("Loading precompiled file.")
         spectra = np.load(_spec_path)
